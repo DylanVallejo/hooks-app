@@ -9,6 +9,12 @@ export const useForm = ( initialForm = {} ) => {
     // email: '',
     // password : ""
     
+    // react-hook-form  es una libreria que nos ayuda con la manipulacion de formularios
+    
+    const onResetForm = ( ) => {
+        setFormState(initialForm)
+    }
+    
     const onInputChange = ({ target }) => {
         const {name , value} = target;
         setFormState({
@@ -21,7 +27,8 @@ export const useForm = ( initialForm = {} ) => {
     return  {
         ...formState,
         formState,
-        onInputChange
+        onInputChange,
+        onResetForm
     };
 
 }
