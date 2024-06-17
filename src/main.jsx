@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
+// import { Prueba } from "./02-useEffect/Prueba";
 // import { HooksApp } from "./HooksAp";
 // import { CounterApp } from "./01-useState/CounterApp";
 // import { CounterWhitCustomHook } from "./01-useState/CounterWhitCustomHook";
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         {/* <CounterWhitCustomHook/> */}
         {/* <FormWithCustomHook/> */}
         <MultipleCustomHooks/>
+        {/* <Prueba/> */}
         {/* <SimpleForm/> */}
     </React.StrictMode>
 )
