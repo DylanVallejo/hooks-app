@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
 
+const localCache = {
+    // 'https://pokemon/1': {name: 'Bulbasur', info},
+    // 'https://pokemon/1': {name: 'Ivysaur', info},
+};
+
 
 export const useFetch = ( url ) => {
     
@@ -27,6 +32,21 @@ export const useFetch = ( url ) => {
     
     const getFetch = async() => {
         
+        // tanksTnak query permitir realizar cacheo mini curso disponible
+        
+        if( localCache[url] ){
+            console.log('Usando cache')
+            
+            setState({
+                data: localCache[url],
+                isLoading:false,
+                hasError: false, 
+                errorMessage: null
+            })
+            
+            return;
+        }
+        
         setLoadingState();
         const response = await fetch(url);
         
@@ -51,7 +71,8 @@ export const useFetch = ( url ) => {
             hasError:false,
             errorMessage:null
         })
-        // console.log(data)
+        
+        localCache[url] = data;
     }
     
     
