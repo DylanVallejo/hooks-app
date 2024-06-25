@@ -8,7 +8,8 @@ import './index.css';
 // import { CounterWhitCustomHook } from "./01-useState/CounterWhitCustomHook";
 // import { SimpleForm } from "./02-useEffect/SimpleForm";
 // import { FormWithCustomHook } from "./02-useEffect/FormWithCustomHook";
-import { MultipleCustomHooks } from "./03-examples/MultipleCustomHooks";
+// import { MultipleCustomHooks } from "./03-examples/MultipleCustomHooks";
+import { FocusScreen } from "./04-useRef/FocusScreen";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
@@ -16,7 +17,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         {/* <CounterApp /> */}
         {/* <CounterWhitCustomHook/> */}
         {/* <FormWithCustomHook/> */}
-        <MultipleCustomHooks/>
+        {/* <MultipleCustomHooks/> */}
+        <FocusScreen/>
         {/* <Prueba/> */}
         {/* <SimpleForm/> */}
     </React.StrictMode>

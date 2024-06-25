@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const localCache = {
     // 'https://pokemon/1': {name: 'Bulbasur', info},
-    // 'https://pokemon/1': {name: 'Ivysaur', info},
+    // 'https://pokemon/2': {name: 'Ivysaur', info},
 };
 
 
@@ -43,7 +43,7 @@ export const useFetch = ( url ) => {
                 hasError: false, 
                 errorMessage: null
             })
-            
+            console.log(data)
             return;
         }
         
@@ -73,6 +73,7 @@ export const useFetch = ( url ) => {
         })
         
         localCache[url] = data;
+        console.log(localCache)
     }
     
     
